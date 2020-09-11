@@ -1,25 +1,38 @@
 /*
  * @Author: your name
  * @Date: 2020-09-10 09:23:52
- * @LastEditTime: 2020-09-10 15:34:26
+ * @LastEditTime: 2020-09-11 11:38:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webpack-project/src/search.js
  */
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './css/search.less'
-import logo from './images/logo.png'
 
-class Search extends React.Component{
+import MediaQuery from 'react-responsive'
+import 'antd/dist/antd.css'
+
+
+import PCIndex from './index/components/pc_index.js'
+import MobileIndex from './index/components/mobile_index'
+
+
+class Root extends React.Component{
     render(){
-        return <div class = "search-text">
-            搜索模块<img src={ logo }/>
+        return (
+        <div>
+            <MediaQuery query ="(min-device-width:1224px)">
+            <PCIndex></PCIndex>
+            </MediaQuery>
+            <MediaQuery query="(max-device-width:1223px)">
+            <MobileIndex></MobileIndex>
+            </MediaQuery>
         </div>
+        )
     }
 }
 
 ReactDOM.render(
-    <Search></Search>,
+    <Root/>,
     document.getElementById('root')
 )

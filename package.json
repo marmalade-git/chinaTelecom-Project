@@ -1,11 +1,11 @@
 {
-  "name": "chinaTelecom-Project",
+  "name": "chinatelecom-project",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --watch",
+    "build": "webpack",
     "dev": "webpack-dev-server --open"
   },
   "keywords": [],
@@ -26,7 +26,10 @@
     "file-loader": "^6.1.0"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.2.2",
+    "antd": "^4.6.3",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-responsive": "^8.1.0"
   }
 }

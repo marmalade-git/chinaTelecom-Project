@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-10 09:24:09
- * @LastEditTime: 2020-09-11 09:23:32
+ * @LastEditTime: 2020-09-11 09:52:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webpack-project/webpack.config.js
@@ -12,7 +12,6 @@ const webpack = require('webpack');
 
 module.exports = {
 
-    watch:false,
     mode:'development',
 
   entry: './src/index.js',    
@@ -25,7 +24,7 @@ module.exports = {
     rules:[
       {test:/\.js$/, use:'babel-loader'},
       {test:/\.css$/,use:['style-loader','css-loader']},
-      {test:/\.less$/,use:['style-loader','css-loader','less-loader']},
+      //{test:/\.less$/,use:['style-loader','css-loader','less-loader']},
       //{test:/\.(jpeg|jpg|png|gif)$/,use:'file-loader'},
       {test:/\.(ttf|woff|woff2|eot|otf)$/,use:'file-loader'},
       {test:/\.(jpeg|jpg|png|gif)$/,use:'file-loader'}
